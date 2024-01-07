@@ -1,0 +1,6 @@
+{
+    "cmake.sourceDirectory": "/home/zsw/Projects/tsai2onnx/ncnn",
+    // "cmake.debugConfig": {
+    //     "args": ["/home/zsw/Projects/tsai2onnx/ncnn/data/0.txt"]    // 参数列表，注意要用绝对路径!
+    // }
+}
