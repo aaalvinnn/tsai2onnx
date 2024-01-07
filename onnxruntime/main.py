@@ -3,8 +3,9 @@ import onnxruntime as rt
 
 
 # read data
-DATA_PATH = '../data/npydata_zmj/'
-ONNX_MODEL_PATH = '../models/20240102InceptiontimePlus_zmj.onnx'
+DATA_PATH = './data/npydata_zmj/'
+ONNX_MODEL_PATH = './models/20240102InceptiontimePlus_zmj.onnx'
+# ONNX_MODEL_PATH = '../models/sim_model.onnx'
 
 X_test = np.load(DATA_PATH + 'X_test.npy')
 y_test = np.load(DATA_PATH + 'y_test.npy')
@@ -48,3 +49,4 @@ acc = true_num / len(y_test)
 print(f"acc = {acc}")
 print(f"200_samples_infer_time: {totaltime_200_samples_end - totaltime_200_samples_start}s")
 print(f"one_sample_infer_time: {one_infer_time}s")
+print(results[3])
