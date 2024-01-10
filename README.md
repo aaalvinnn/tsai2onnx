@@ -4,4 +4,6 @@
 >
 > models：onnx模型
 >
-> onnxruntime：推理脚本
+> onnxruntime：onnxruntime推理框架py版
+>
+> ncnn: ncnn推理框架cpp版

@@ -26,7 +26,8 @@ std::vector<int> generate_random_input()
     return randomArray;
 }
 
-int main(){
+// 测试测试集的所有输入
+int main1(){
     // 获取输入
     std::vector<int> labels = get_input("../data/labels.txt");
 
@@ -92,21 +93,8 @@ int main(){
     return 0;
 }
 
-// test
-int main11()
-{
-    std::vector<int> input = get_input("../data/labels.txt");
-
-    // Example: Print the first 10 elements
-    std::cout << "First 10 elements: " << std::endl;
-    for (int i = 0; i < input.size(); ++i) {
-        std::cout << input[i] << " ";
-    }
-    return 0;
-}
-
-// test
-int main1(int argc, char *argv[])
+// test, 单独测试一个输入
+int main(int argc, char *argv[])
 {
     // 处理异常输入
     if (argc < 2)
@@ -116,7 +104,7 @@ int main1(int argc, char *argv[])
     }
 
     // 获取输入
-    std::vector<int> labels = get_input("../data/labels.txt");
+    std::vector<int> labels = get_input("../../data/labels.txt");
 
     // 加载转换模型
     // ncnn::set_log_level(ncnn::LOG_NONE);    // 屏蔽输出日志信息
@@ -124,8 +112,8 @@ int main1(int argc, char *argv[])
     // net.opt.num_threads=1;
     // net.load_param("../models/20240102InceptiontimePlus_zmj-sim-opt-fp16.param");
     // net.load_model("../models/20240102InceptiontimePlus_zmj-sim-opt-fp16.bin");
-    net.load_param("../models/model_raw.param");
-    net.load_model("../models/model_raw.bin");
+    net.load_param("../../models/model.param");
+    net.load_model("../../models/model.bin");
 
     // 一次推理
     ncnn::Extractor extractor = net.create_extractor();     // 初始化ncnn推理器
