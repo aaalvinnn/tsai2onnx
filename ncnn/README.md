@@ -14,23 +14,15 @@
 ## Steps
 1. 编译
 ```
-cd tsai2onnx/ncnn/ncnn
 mkdir build
 cd build
-cmake .. -DNCNN_BENCHMARK=OFF -DNCNN_VULKAN=OFF
+cmake ..
 make -j8
-make install
 ```
-- vulkan是针对gpu的，如果想要ncnn能调用gpu做推理，那么选项需要打开:DHCNN_VULKAN=ON;
-- -DNCNN_BENCHMARK=ON表示在Extractor.extract前向推理时，打印模型信息日志，调试时可以打开；
-2. 测试ncnn是否安装成功
+2. 测试
 ```
-cd ../examples ../build/examples/squeezenet ../images/256-ncnn.png
-output：
-(NR_deploy) zsw@ubuntu:~/Projects/tsai2onnx/ncnn/ncnn/examples$ ../build/examples/squeezenet ../images/256-ncnn.png
-532 = 0.165951
-920 = 0.094098
-716 = 0.062193
+cd build
+./main
 ```
 则正常安装
 
