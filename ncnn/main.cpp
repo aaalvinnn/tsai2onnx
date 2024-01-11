@@ -67,7 +67,7 @@ std::vector<int> infer_200(ncnn::Net &net, const std::string data_input_path, st
 }
 
 // 测试测试集的所有输入
-int main1(){
+int main(){
     // 获取输入
     std::vector<int> labels = get_input("../data/labels.txt");
 
@@ -116,7 +116,7 @@ int main1(){
 }
 
 // test, 单独测试一个输入
-int main(int argc, char *argv[])
+int main1(int argc, char *argv[])
 {
     // 处理异常输入
     if (argc < 2)
