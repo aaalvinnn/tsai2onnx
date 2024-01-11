@@ -10,7 +10,7 @@
 #include "post_process.h"
 
 // #define MODEL_RAW   // onnx模型中是否包含正则化层和softmax层
-#define MODEL_PATH "../../models/traced_model.ncnn"
+#define MODEL_PATH "../models/traced_model.ncnn"
 
 /* 生成随机输入 */
 std::vector<int> generate_random_input()
@@ -134,8 +134,8 @@ int main1(int argc, char *argv[])
     // net.opt.num_threads=1;
     // net.load_param("../models/20240102InceptiontimePlus_zmj-sim-opt-fp16.param");
     // net.load_model("../models/20240102InceptiontimePlus_zmj-sim-opt-fp16.bin");
-    net.load_param("../../models/traced_model.ncnn.param");
-    net.load_model("../../models/traced_model.ncnn.bin");
+    net.load_param("../models/traced_model.ncnn.param");
+    net.load_model("../models/traced_model.ncnn.bin");
 
 
     // 获取函数开始执行的时间点

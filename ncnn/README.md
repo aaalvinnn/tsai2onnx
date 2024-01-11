@@ -4,8 +4,10 @@
 --data: cpp测试集
 --lib: 一些预处理和后处理函数
 --models: ncnn模型
---ncnn：ncnn框架源码，需要编译安装
---tools: numpy数组转txt脚本
+--ncnn：ncnn框架依赖，已经编译和取出必要库了
+--tools: 
+----npy2txt:numpy数组转txt脚本
+----pnnx: .pt模型转换ncnn模型工具
 --main.cpp: 主函数
 ```
 

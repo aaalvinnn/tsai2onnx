@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.5)
 find_package(REQUIRED)
 
 # include directories
-include_directories(ncnn/build/install/include/ncnn) # ncnn
+include_directories(ncnn/include/ncnn) # ncnn
 include_directories(lib)    # user include dir
-link_directories(ncnn/build/install/lib)
+link_directories(ncnn/lib)
 link_directories(lib)
 
 FIND_PACKAGE( OpenMP REQUIRED)  

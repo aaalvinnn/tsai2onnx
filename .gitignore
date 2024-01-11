@@ -2,5 +2,5 @@ ncnn/ncnn/build
 ncnn/build
 build
 onnxruntime/dist
-ncnn/libtorch
+ncnn/tools/pnnx
 ncnn/libtorch-cxx11-abi-shared-with-deps-1.10.0+cpu.zip
